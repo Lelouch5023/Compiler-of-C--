@@ -1,0 +1,66 @@
+
+FUNCTION power :
+PARAM v1
+PARAM v2
+t1 := #1
+v3 := t1
+LABEL label1 :
+t2 := v2
+t3 := #0
+IF t2 > t3 GOTO label2
+GOTO label3
+LABEL label2 :
+t8 := v2
+t9 := #2
+t6 := t8 / t9
+t7 := #2
+t4 := t6 * t7
+t5 := v2
+IF t4 != t5 GOTO label4
+GOTO label5
+LABEL label4 :
+t11 := v3
+t12 := v1
+t10 := t11 * t12
+v3 := t10
+LABEL label5 :
+t14 := v1
+t15 := v1
+t13 := t14 * t15
+v1 := t13
+t17 := v2
+t18 := #2
+t16 := t17 / t18
+v2 := t16
+GOTO label1
+LABEL label3 :
+t19 := v3
+RETURN t19
+
+FUNCTION sub :
+PARAM v4
+PARAM v5
+t21 := v4
+t22 := v5
+t20 := t21 - t22
+RETURN t20
+
+FUNCTION main :
+READ t23
+v6 := t23
+READ t24
+v7 := t24
+t26 := v6
+t27 := v7
+ARG t27
+ARG t26
+t25 := CALL power
+WRITE t25
+t29 := v6
+t30 := v7
+ARG t30
+ARG t29
+t28 := CALL sub
+WRITE t28
+t31 := #0
+RETURN t31
