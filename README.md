@@ -29,19 +29,10 @@
 	
 
 
-
-
-
-
-
 函数的处理：
 	1. ret 
 	2. param 注意：实际上是从VarList开始用的structure类型来连接的
 	3. funcname
-
-
-
-
 
 
 
@@ -54,3 +45,12 @@ Dec = ...VarDec...
 这时算法是：把Dec作原子，把DecList/Def作链表，然后在DefList把很多链表拼接起来
 注意Dec.type最开始是Specifier传进来的继承属性
 后来dfvisit了Dec以后，Dec.type应该是其ID的type，作综合属性
+
+
+依赖：
+sudo apt install flex
+sudo apt install bison
+sudo apt install spim
+
+
+

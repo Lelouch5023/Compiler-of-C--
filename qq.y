@@ -65,10 +65,12 @@
 
 /* grammar code here */
 /********************	High-level Definitions *****************/
-Program: ExtDefList {$$ = makenode("Program", 1, $1); treeTrav($$); syntaxAnalysis($$); 
-							setFunctionVarNo(); IntermediateCode = translate($$); 
-							getMipsCode(IntermediateCode);						
-							} 
+Program: ExtDefList {$$ = makenode("Program", 1, $1); 
+					treeTrav($$); syntaxAnalysis($$); 
+					setFunctionVarNo(); 
+					IntermediateCode = translate($$); 
+					getMipsCode(IntermediateCode);						
+					} 
 ;
 ExtDefList: {/* empty */$$ = NULL;}
 		  | ExtDef ExtDefList {$$ = makenode("ExtDefList", 2, $1, $2);}
